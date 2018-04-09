@@ -11,13 +11,13 @@ for i in range(n):
     print(grammer)
     if s[0]==p[0]:
         p=p.split("|")
-        if(p!=x):
-            p.append("EPS")
-            print(p)
-            f=("1st production is :-"+s+"->"+p[1]+""+s+"`")
-            print(f)
-            s=("2nd production is :-"+s+"`->"+p[0][1:]+""+s+"`|"+p[2])
-            print(s)
+        #if(p!=x):
+        p.append("EPS")
+        print(p)
+        f=("1st production is :-"+s+"->"+p[1]+""+s+"`")
+        print(f)
+        s=("2nd production is :-"+s+"`->"+p[0][1:]+""+s+"`|"+p[-1])
+        print(s)
     else:
         print("Grammer is not recursive")
 if s in non_terminal:
